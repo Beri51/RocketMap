@@ -209,12 +209,12 @@ def complete_tutorial(api, account, tutorial_state):
 # Called during fort parsing in models.py
 def tutorial_pokestop_spin(api, map_dict, forts, step_location, account):
     player_level = get_player_level(map_dict)
-    if player_level > 1:
+    if player_level > 3:
         log.debug(
             'No need to spin a Pokestop. ' +
             'Account %s is already level %d.',
             account['username'], player_level)
-    else:  # Account needs to spin a Pokestop for level 2.
+    else:  # Account needs to spin a Pokestop for level 4.
         log.debug(
             'Spinning Pokestop for account %s.',
             account['username'])
